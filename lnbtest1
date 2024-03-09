@@ -1,0 +1,128 @@
+#ans 1
+a=int(input("Enter the no of pizzas bought "))
+b=int(input("Enter the no of puffs bought  "))
+c=int(input("Enter the no of cool drinks  bought "))
+print("no of pizzas bought :",a)
+print("no of puffs bought :",b)
+print("no of cool drinks  bought :",c)
+d=a*100+b*20+c*10
+print("total price =",d)
+
+#ans 2
+a=int(input("Enter the total no of stairs :")
+b=int(input("Enter the total no of steps :")
+c=a+b-1
+print("Total steps taken :",c)
+
+#ans 3
+#not able to understand the question
+
+#ans 4
+def monkeys_left_on_tree(n, k, j, m, p):
+    if n < 0 or k < 0 or j < 0 or m < 0 or p < 0:
+        return "INVALID INPUT"
+
+    total_food = m + p
+    total_food_per_monkey = k + j
+
+    total_monkeys_eating = min(total_food / total_food_per_monkey, n)
+    monkeys_left = n - total_monkeys_eating
+
+    return monkeys_left
+
+
+n = int(input("Enter the total number of monkeys: "))
+k = int(input("Enter the number of bananas each monkey can eat: "))
+j = int(input("Enter the number of peanuts each monkey can eat: "))
+m = int(input("Enter the total number of bananas offered: "))
+p = int(input("Enter the total number of peanuts offered: "))
+
+
+print("Number of monkeys left on the tree:", monkeys_left_on_tree(n, k, j, m, p))
+
+
+#ans 5
+a=int(input("Enter the oxygen level of 1 round 1 player :"))
+b=int(input("Enter the oxygen level of 2 round 1 player :"))
+c=int(input("Enter the oxygen level of 3 round 1 player :"))
+d=int(input("Enter the oxygen level of 1 round 2 player :"))
+e=int(input("Enter the oxygen level of 2 round 2 player :"))
+f=int(input("Enter the oxygen level of 3 round 2 player :"))
+g=int(input("Enter the oxygen level of 1 round 3 player :"))
+h=int(input("Enter the oxygen level of 2 round 3 player :"))
+i=int(input("Enter the oxygen level of 3 round 3 player :"))
+avg1=(a+b+c)/3
+avg2=(d+e+f)/3
+avg3=(g+h+i)/3
+avg4=max(avg1,avg2,avg3)
+if(avg1==avg4):
+  print("Trainee 1")
+if(avg2==avg4):
+  print("Trainee 2")
+if(avg3==avg4):
+  print("Trainee 3")
+else:
+  print("All Trainee are unfit")
+
+
+#ans 6
+matrix_size = int(input("Enter the size of the array: "))
+matrix = []
+
+for i in range(matrix_size):
+    element = int(input(f"Enter the element at the {i}th index: "))
+    matrix.append(element)
+
+even_matrix = []
+odd_matrix = []
+
+for i in range(matrix_size):
+    if i % 2 == 0:
+        even_matrix.append(matrix[i])
+    else:
+        odd_matrix.append(matrix[i])
+
+even_matrix.sort()
+odd_matrix.sort()
+
+print("After sorting:")
+print("Sorted even array:", " ".join(map(str, even_matrix)))
+print("Sorted odd array:", " ".join(map(str, odd_matrix)))
+
+sum_of_second_largest = 0
+if len(even_matrix) >= 2:
+    sum_of_second_largest += even_matrix[-2]
+if len(odd_matrix) >= 2:
+    sum_of_second_largest += odd_matrix[-2]
+
+print("The sum of the second largest numbers from both matrices is:", sum_of_second_largest)
+
+
+#ans 7
+
+
+#ans 8
+arr = [1, 2, 3,6, 4, 5]
+n = len(arr)
+leaders = []
+
+for i in range(n-1):  
+    if arr[i] > arr[i + 1]:
+        leaders.append(arr[i])
+print(*leaders)
+
+
+#ans 9
+a=input("Enter 1st string :")
+b=input("Enter 2nd string :")
+if sorted(a)==sorted(b):
+  print("yes")
+else:
+  print("No")
+
+#ans 10
+a=input("Enter string:")
+if a==a[::-1]:
+  print("Yes its a palindrome")
+else:
+  print("No its not a palindrome ")
